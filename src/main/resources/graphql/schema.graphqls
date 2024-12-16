@@ -1,0 +1,13 @@
+type Query {
+    getAllStudents: [Student] 
+    getStudentByDepartment(department: String): [Student]   
+}
+
+
+type Student {
+    rollno: ID
+    name: String
+    department: String 
+    mark: Int
+}
+
