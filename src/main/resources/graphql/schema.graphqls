@@ -1,0 +1,24 @@
+type Student {
+    rollno: ID
+    name: String
+    department: String
+    mark: Int
+}
+
+input StudentInput {
+    rollno: ID
+    name: String
+    department: String
+    mark: Int
+}
+
+type Query {
+    getAllStudents: [Student]
+    getStudentByDepartment(department: String): [Student]
+}
+
+type Mutation {
+    addStudent(student: StudentInput): Student
+    addStudentByParam(rollno: ID, name: String, department: String, mark: Int): Student
+    updateStudent(student: StudentInput): Student
+}
